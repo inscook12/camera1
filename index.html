@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#214e43">
+  <meta name="description" content="곽인아의 AI 영상클래스. 모찌 영상 10종으로 배우는 카메라 앵글과 샷 크기 수업.">
+  <title>곽인아의 AI 영상클래스-카메라 앵글 수업</title>
+  <style>
+    :root{--paper:#faf9f5;--ink:#23473e;--muted:#66736b;--line:#dee4dc;--green:#214e43;--wash:#edf1e8;--yellow:#edbb51;--white:#fff;--serif:Georgia,'Times New Roman',serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #ce9223;outline-offset:5px}a{color:inherit;text-decoration:none}button:disabled{opacity:.35;cursor:default}.wrap{max-width:1256px;margin:0 auto;padding:0 48px}
+    header{border-bottom:1px solid var(--line)}.header-inner{height:83px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:800;letter-spacing:-.7px}.brand-icon{height:32px;width:36px;border:1.6px solid var(--ink);border-radius:8px;display:grid;place-items:center;position:relative}.brand-icon:after{content:'';width:9px;height:5px;background:var(--paper);border:1.6px solid var(--ink);border-bottom:0;position:absolute;top:-6px;left:6px;border-radius:3px 3px 0 0}.lens{width:13px;height:13px;border:1.6px solid var(--ink);border-radius:50%}.header-note{display:flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.6px}.dot{width:6px;height:6px;background:var(--green);border-radius:50%}
+    .hero{padding:62px 0 43px;display:grid;grid-template-columns:1fr 300px;align-items:end;gap:44px}.eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:2px;font-weight:700}.eyebrow:before{content:'';height:1px;width:28px;background:var(--green)}h1{margin:22px 0 19px;font-size:clamp(34px,4.2vw,54px);line-height:1.3;font-weight:800;letter-spacing:-2.5px}h1 em{font-style:normal;position:relative;isolation:isolate;white-space:nowrap}h1 em:after{content:'';position:absolute;background:#f3dc9b;height:14px;left:0;right:0;bottom:4px;z-index:-1;border-radius:2px}.intro{font-size:14px;line-height:1.9;color:var(--muted);margin:0;word-break:keep-all}.lesson-note{padding:24px 25px;background:var(--wash);border-radius:4px;border-left:3px solid #9ab29e}.lesson-note .note-label{font-size:10px;letter-spacing:1.4px;font-weight:700;margin-bottom:15px}.lesson-note p{margin:8px 0;font-size:13px;line-height:1.8}.lesson-note strong{font-weight:800}.lesson-note span{font-size:12px;color:var(--muted)}
+    .toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:21px 0;border-top:1px solid var(--line);margin-top:7px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid transparent;background:transparent;padding:10px 15px;border-radius:5px;font-size:13px;color:var(--muted);font-weight:700;display:flex;gap:9px;align-items:center}.filter span{font-size:10px;font-weight:500;opacity:.75}.filter[aria-pressed="true"]{background:var(--green);color:white}.filter:hover:not([aria-pressed="true"]){border-color:var(--line)}.start{background:transparent;border:0;color:var(--ink);font-size:13px;font-weight:700;padding:10px 0;display:flex;align-items:center;gap:8px}.play-small{font-size:10px;background:var(--yellow);border-radius:50%;width:26px;height:26px;display:grid;place-items:center;padding-left:2px}
+    .collection{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 28px;padding-bottom:52px}.card{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:box-shadow .2s,transform .2s}.card:hover{box-shadow:0 10px 28px #23473e0c;transform:translateY(-3px)}.preview{width:100%;padding:0;border:0;display:block;background:#fff;position:relative;text-align:left;overflow:hidden;aspect-ratio:16/9}.preview img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .4s}.card:hover .preview img{transform:scale(1.015)}.preview:after{content:'';position:absolute;inset:0;box-shadow:inset 0 -35px 30px -35px #23473e30;pointer-events:none}.play{position:absolute;right:16px;bottom:14px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-size:13px;padding-left:2px;box-shadow:0 2px 8px #23473e22;transition:background .2s}.card:hover .play{background:#356e5f}.card-body{padding:21px 24px 23px;border-top:1px solid #edf0ea}.card-top{display:flex;align-items:center;justify-content:space-between;gap:15px}.card-title{display:flex;align-items:baseline;gap:11px;min-width:0}.number{font-family:var(--serif);font-size:17px;color:#84988a;font-style:italic}h2{font-size:19px;margin:0;letter-spacing:-.7px}.category{font-size:10px;padding:5px 9px;border:1px solid var(--line);border-radius:3px;white-space:nowrap;color:var(--muted)}.category.shot{background:#fbf6e9;border-color:#eee2c4;color:#8a6b30}.english{font-size:10px;letter-spacing:1.1px;color:#819087;margin:7px 0 13px 29px}.card-description{font-size:13px;color:var(--muted);line-height:1.8;margin:0;word-break:keep-all}.question{margin:17px 0 0;padding-top:13px;border-top:1px dashed var(--line);font-size:12px;line-height:1.75;color:#466457}.question span{font-size:10px;font-weight:800;color:#8b7139;margin-right:8px}.bottom-note{display:flex;align-items:center;gap:20px;border-top:1px solid var(--line);padding:28px 0 35px}.bottom-note .label{font-family:var(--serif);font-size:22px;font-style:italic;color:#7a8c7e;white-space:nowrap}.bottom-note p{margin:0;font-size:12px;line-height:1.9;color:var(--muted);word-break:keep-all}footer{border-top:1px solid var(--line);padding:21px 0 28px;color:#819087;font-size:10px;letter-spacing:1px}.footer-inner{display:flex;justify-content:space-between;gap:16px}
+    dialog{border:0;border-radius:12px;padding:0;width:min(1120px,94vw);max-height:95dvh;color:var(--ink);background:var(--paper);box-shadow:0 25px 100px #0005}dialog::backdrop{background:#10261ee8;backdrop-filter:blur(7px)}.viewer-head{display:flex;align-items:center;justify-content:space-between;padding:17px 24px;gap:15px}.viewer-kicker{font-size:10px;letter-spacing:1.6px;color:var(--muted)}.viewer-title{margin:5px 0 0;font-size:21px;font-weight:800;letter-spacing:-.7px}.close{height:36px;width:36px;border:1px solid var(--line);border-radius:50%;font-size:23px;background:transparent;color:var(--ink)}.video-wrap{background:#fff;position:relative}.video-wrap video{display:block;width:100%;max-height:65dvh;aspect-ratio:16/9;background:#fff}.video-error{padding:24px;line-height:1.8;color:#8b3e2c}.viewer-body{padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:22px}.viewer-description{margin:0;font-size:14px;line-height:1.7}.viewer-question{font-size:12px;color:var(--muted);margin:7px 0 0;line-height:1.6}.viewer-nav{display:flex;gap:8px;flex-shrink:0;align-items:center}.nav-button,.fullscreen{border:1px solid var(--line);border-radius:5px;padding:9px 12px;background:#fff;color:var(--ink);font-size:12px}.fullscreen{background:var(--green);color:white;border-color:var(--green)}.viewer-foot{padding:0 24px 16px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:var(--muted)}[hidden]{display:none!important}
+    @media(min-width:1600px){.wrap{max-width:1416px}.hero{padding-top:72px}.collection{gap:36px}}
+    @media(max-width:800px){.wrap{padding:0 24px}.header-inner{height:70px}.header-note{font-size:10px}.hero{grid-template-columns:1fr 240px;gap:20px;padding-top:42px}h1{font-size:36px;letter-spacing:-1.8px}.lesson-note{padding:17px}.intro{font-size:13px}.card-body{padding:17px}h2{font-size:16px}.card-title{gap:8px}.category{font-size:9px;padding:4px 6px}.english{margin-left:25px;font-size:9px}.collection{gap:22px 17px}.viewer-body{align-items:flex-start;flex-direction:column}.viewer-nav{align-self:flex-end}}
+    @media(max-width:580px){.wrap{padding:0 19px}.brand{font-size:15px}.header-note{letter-spacing:0}.header-note .dot{display:none}.hero{display:block;padding:35px 0 24px}h1{font-size:35px;margin:18px 0 16px;letter-spacing:-1.8px}.eyebrow{font-size:9px;letter-spacing:1.6px}.lesson-note{margin-top:25px;padding:14px 18px}.lesson-note .note-label{margin-bottom:8px}.lesson-note p{margin:3px 0}.lesson-note span{display:none}.toolbar{gap:8px;align-items:flex-start;padding:17px 0}.filters{gap:2px}.filter{font-size:12px;padding:9px 10px;gap:5px}.start{font-size:0;padding:4px}.start .play-small{font-size:10px;width:32px;height:32px}.collection{grid-template-columns:1fr;gap:23px;padding-bottom:30px}.card-body{padding:19px 21px}.card-title{gap:11px}h2{font-size:19px}.english{margin-left:29px}.card-description{font-size:13px}.bottom-note{align-items:flex-start;gap:13px}.bottom-note .label{font-size:18px}.footer-inner{font-size:9px;letter-spacing:.3px;flex-direction:column;gap:7px}.viewer-head{padding:15px}.viewer-title{font-size:17px}.viewer-body{padding:15px}.viewer-description{font-size:13px}.viewer-nav{width:100%;justify-content:flex-end}.viewer-foot{padding:0 15px 15px}.keyboard-hint{display:none}}
+    .brand-icon{flex-shrink:0}.brand-name{word-break:keep-all;line-height:1.6}
+    .toolbar-actions{display:flex;align-items:center;gap:19px}.compare-open{border:1px solid var(--green);background:#fff;color:var(--green);border-radius:5px;padding:9px 13px;font-size:12px;font-weight:700;white-space:nowrap}.compare-panel{border:1px solid #b7c6b5;border-radius:8px;background:#f0f3eb;margin:0 0 30px;padding:24px}.compare-header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.compare-heading{font-size:23px;letter-spacing:-.8px;margin:0 0 8px}.compare-intro{font-size:12px;color:var(--muted);margin:0;line-height:1.8}.compare-close{background:transparent;border:0;color:var(--ink);font-size:25px;line-height:1;padding:2px 5px}.compare-presets{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}.compare-presets button{border:1px solid #ccd6c6;background:#fff;border-radius:4px;font-size:11px;color:var(--ink);padding:7px 10px}.compare-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.compare-side{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;min-width:0}.compare-select-label{padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:11px;color:var(--muted)}.compare-select-label span{white-space:nowrap}.compare-select-label select{width:100%;min-width:0;border:1px solid var(--line);border-radius:4px;padding:8px;background:#fff;color:var(--ink);font:inherit;font-size:12px}.compare-side video{display:block;width:100%;aspect-ratio:16/9;background:white}.compare-description{padding:14px 16px;margin:0;font-size:12px;line-height:1.9;color:var(--muted);min-height:74px;word-break:keep-all}.compare-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:18px}.compare-playback{display:flex;gap:7px;flex-wrap:wrap}.compare-playback button{border:1px solid #bac9b5;border-radius:4px;background:#fff;color:var(--ink);padding:9px 13px;font-size:12px}.compare-playback button:first-child{background:var(--green);color:#fff;border-color:var(--green)}.compare-status{font-size:11px;color:var(--muted);line-height:1.7;margin:0}.compare-panel:fullscreen{width:100vw;height:100dvh;overflow:auto;padding:25px 35px;background:var(--paper)}.compare-panel:fullscreen .compare-side video{max-height:61dvh}.compare-panel:fullscreen .compare-heading{font-size:26px}.compare-open:focus-visible,select:focus-visible{outline:3px solid #ce9223;outline-offset:4px}
+    @media(max-width:800px){.toolbar-actions{gap:10px}.compare-open{font-size:11px;padding:9px}.compare-panel{padding:19px}.compare-footer{align-items:flex-start;flex-direction:column}.compare-columns{gap:12px}}
+    @media(max-width:580px){.toolbar{flex-wrap:wrap}.toolbar-actions{width:100%;justify-content:space-between}.start{font-size:12px}.compare-panel{padding:16px}.compare-heading{font-size:21px}.compare-columns{grid-template-columns:1fr}.compare-description{min-height:0}.compare-select-label{padding:10px 12px}.compare-presets{gap:5px}.compare-presets button{font-size:10px}.compare-playback button{padding:9px 10px}.compare-panel:fullscreen{padding:18px;}.compare-panel:fullscreen .compare-side video{max-height:none}}
+    @media(max-width:800px){.header-note{display:none}}
+    @media(max-width:580px){.brand{font-size:14px;letter-spacing:-.5px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap header-inner"><a href="./index.html" class="brand"><span class="brand-icon" aria-hidden="true"><span class="lens"></span></span><span class="brand-name">곽인아의 AI 영상클래스-카메라 앵글 수업</span></a><span class="header-note"><i class="dot" aria-hidden="true"></i> VISUAL REFERENCE / 01</span></div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div><div class="eyebrow">CAMERA ANGLES & SHOT SIZES</div><h1 id="page-title">같은 모찌,<br><em>다른 시선으로.</em></h1><p class="intro">어디에서 바라볼까요? 얼마나 가까이 담을까요?<br>10개의 짧은 영상으로 카메라 앵글과 샷의 차이를 만나보세요.</p></div>
+      <aside class="lesson-note"><div class="note-label">BEFORE WE START</div><p><strong>앵글</strong>은 카메라가 바라보는 <strong>각도</strong><br><strong>샷 크기</strong>는 화면에 담기는 <strong>범위</strong></p><span>두 가지를 조합하면 장면의 느낌이 달라져요.</span></aside>
+    </section>
+    <nav class="toolbar" aria-label="레퍼런스 분류"><div class="filters"><button class="filter" data-filter="all" aria-pressed="true">전체 보기 <span>10</span></button><button class="filter" data-filter="angle" aria-pressed="false">카메라 앵글 <span>05</span></button><button class="filter" data-filter="shot" aria-pressed="false">샷 크기 <span>05</span></button></div><div class="toolbar-actions"><button class="compare-open" id="compare-open" aria-expanded="false" aria-controls="compare-panel">▥ 나란히 비교</button><button class="start" id="start" aria-label="선택한 분류의 첫 영상부터 크게 보기"><span class="play-small" aria-hidden="true">▶</span>처음부터 크게 보기</button></div></nav>
+    <section class="compare-panel" id="compare-panel" aria-labelledby="compare-heading" hidden>
+      <div class="compare-header"><div><h2 class="compare-heading" id="compare-heading">나란히 보면, 차이가 보여요.</h2><p class="compare-intro">두 영상을 골라 구도와 느낌을 비교해 보세요. 개별 재생 막대로 원하는 장면을 멈춰 볼 수도 있어요.</p></div><button class="compare-close" id="compare-close" aria-label="비교 화면 닫기">×</button></div>
+      <div class="compare-presets" aria-label="추천 비교"><button data-pair="02,03">하이 앵글 ↔ 로우 앵글</button><button data-pair="01,05">아이 레벨 ↔ 더치 앵글</button><button data-pair="07,10">클로즈업 ↔ 롱 샷</button></div>
+      <div class="compare-columns">
+        <div class="compare-side"><label class="compare-select-label"><span>왼쪽 영상</span><select id="compare-left-select"></select></label><video id="compare-left-video" controls loop playsinline preload="none" aria-label="왼쪽 비교 영상"></video><p class="compare-description" id="compare-left-description"></p></div>
+        <div class="compare-side"><label class="compare-select-label"><span>오른쪽 영상</span><select id="compare-right-select"></select></label><video id="compare-right-video" controls loop playsinline preload="none" aria-label="오른쪽 비교 영상"></video><p class="compare-description" id="compare-right-description"></p></div>
+      </div>
+      <div class="compare-footer"><div class="compare-playback"><button id="compare-play">▶ 함께 재생</button><button id="compare-pause">Ⅱ 함께 멈춤</button><button id="compare-restart">↻ 처음부터</button><button id="compare-fullscreen">비교 화면 확대 ⤢</button></div><p class="compare-status" id="compare-status" role="status">위에서 볼 때와 아래에서 볼 때, 모찌의 느낌은 어떻게 달라지나요?</p></div>
+    </section>
+    <p id="result-count" role="status" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap">전체 10개 영상</p>
+    <section class="collection" id="collection" aria-label="카메라 앵글과 샷 영상 목록"></section>
+    <aside class="bottom-note"><div class="label">Try this.</div><p>같은 인물을 하이 앵글과 로우 앵글로 촬영하면, 느낌이 어떻게 달라질까요?<br>영상을 본 뒤, 스마트폰으로 같은 구도를 직접 만들어 보세요.</p></aside>
+  </main>
+  <footer><div class="wrap footer-inner"><span>제작: 곽인아</span><span>본 콘텐츠의 무단 복제 및 재사용을 금지합니다.</span></div></footer>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-head"><div><div class="viewer-kicker" id="viewer-kicker"></div><h2 class="viewer-title" id="viewer-title"></h2></div><button class="close" id="close" aria-label="영상 닫기">×</button></div>
+    <div class="video-wrap"><video id="player" controls loop playsinline preload="metadata" aria-label="카메라 수업 영상"></video><p class="video-error" id="video-error" role="alert" hidden>영상을 불러오지 못했어요. HTML 파일과 영상 파일이 같은 폴더에 있는지 확인해 주세요.</p></div>
+    <div class="viewer-body"><div><p class="viewer-description" id="viewer-description"></p><p class="viewer-question" id="viewer-question"></p></div><div class="viewer-nav"><button class="nav-button" id="previous" aria-label="이전 영상">← 이전</button><button class="nav-button" id="next" aria-label="다음 영상">다음 →</button><button class="fullscreen" id="fullscreen">전체 화면</button></div></div>
+    <div class="viewer-foot"><span id="viewer-count" aria-live="polite"></span><span class="keyboard-hint">← → 영상 이동 &nbsp; · &nbsp; ESC 닫기 &nbsp; · &nbsp; 각 영상은 반복 재생됩니다</span></div>
+  </dialog>
+  <noscript><p class="wrap">영상을 보려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+  <script>
+    const lessons = [
+      {id:'01',name:'아이 레벨 앵글',en:'EYE-LEVEL ANGLE',type:'angle',file:'01-아이레벨앵글',description:'피사체와 같은 눈높이에서 바라봐요. 자연스럽고 편안한 느낌을 줍니다.',question:'모찌와 눈을 마주치니 어떤 느낌인가요?'},
+      {id:'02',name:'하이 앵글',en:'HIGH ANGLE',type:'angle',file:'02-하이앵글',description:'피사체보다 높은 곳에서 내려다봐요. 상대적으로 작고 여리게 보일 수 있어요.',question:'눈높이에서 볼 때와 모찌의 인상이 어떻게 다른가요?'},
+      {id:'03',name:'로우 앵글',en:'LOW ANGLE',type:'angle',file:'03-로우앵글',description:'피사체보다 낮은 곳에서 올려다봐요. 크기와 존재감을 강조할 수 있어요.',question:'모찌를 더 당당하게 보이게 하는 요소는 무엇인가요?'},
+      {id:'04',name:'버즈 아이 뷰',en:"BIRD’S-EYE VIEW",type:'angle',file:'04-버즈아이뷰',description:'새가 보듯 높은 곳에서 아래를 바라봐요. 위치와 주변 공간의 관계가 잘 보여요.',question:'위에서 바라보면 어떤 정보가 더 잘 보이나요?'},
+      {id:'05',name:'더치 앵글',en:'DUTCH ANGLE',type:'angle',file:'05-더치앵글',description:'카메라를 좌우로 기울여 수평선을 비스듬하게 담아요. 불안정함이나 역동성을 줄 수 있어요.',question:'화면이 기울어지면 장면의 분위기는 어떻게 변하나요?'},
+      {id:'06',name:'익스트림 클로즈업',en:'EXTREME CLOSE-UP · ECU',type:'shot',file:'06-익스트림클로즈업',description:'눈이나 입처럼 아주 작은 부분을 크게 담아요. 미세한 표정과 디테일에 집중하게 해요.',question:'부분만 보여 줘도 감정을 알아챌 수 있나요?'},
+      {id:'07',name:'클로즈업',en:'CLOSE-UP · CU',type:'shot',file:'07-클로즈업',description:'얼굴을 중심으로 가까이 담아요. 표정과 감정을 자세히 보여 줄 때 좋아요.',question:'모찌의 표정에서 어떤 감정이 읽히나요?'},
+      {id:'08',name:'미디엄 샷',en:'MEDIUM SHOT · MS',type:'shot',file:'08-미디엄샷',description:'주로 허리 위쪽을 담아요. 표정과 손짓, 상체의 움직임을 함께 보여 줘요.',question:'클로즈업에서는 안 보이던 어떤 행동이 보이나요?'},
+      {id:'09',name:'풀 샷',en:'FULL SHOT · FS',type:'shot',file:'09-풀샷',description:'머리부터 발끝까지 전신을 담아요. 전체 자세와 몸의 움직임을 보여 줘요.',question:'전신을 보면 모찌에 대해 무엇을 더 알 수 있나요?'},
+      {id:'10',name:'롱 샷',en:'LONG SHOT · LS',type:'shot',file:'10-롱샷',description:'피사체를 멀리서 담아 주변 공간을 넓게 보여 줘요. 인물과 배경의 관계가 드러나요.',question:'모찌와 주변 공간 중 어디에 먼저 시선이 가나요?'}
+    ];
+    const grid=document.querySelector('#collection');
+    const viewer=document.querySelector('#viewer');
+    const player=document.querySelector('#player');
+    let activeFilter='all', currentIndex=0, returnFocus=null;
+    const comparePanel=document.querySelector('#compare-panel'),compareOpen=document.querySelector('#compare-open'),compareStatus=document.querySelector('#compare-status');
+    const compareSides=['left','right'].map(side=>({select:document.querySelector(`#compare-${side}-select`),video:document.querySelector(`#compare-${side}-video`),description:document.querySelector(`#compare-${side}-description`)}));
+    let comparisonLoaded=false,comparisonOperation=0;
+    function pauseComparison(){comparisonOperation++;compareSides.forEach(side=>side.video.pause());}
+    function loadComparison(){
+      pauseComparison();
+      compareSides.forEach(side=>{const item=lessons.find(lesson=>lesson.id===side.select.value);side.video.poster=`posters/${encodeURIComponent(item.file)}.jpg`;side.video.src=`${encodeURIComponent(item.file)}.mp4`;side.video.preload='auto';side.video.setAttribute('aria-label',`${side===compareSides[0]?'왼쪽':'오른쪽'}: ${item.name} 비교 영상`);side.video.load();side.description.textContent=item.description;});
+      comparisonLoaded=true;
+      compareStatus.textContent=compareSides[0].select.value===compareSides[1].select.value?'같은 영상이 선택되어 있어요. 다른 영상을 선택하면 차이를 비교할 수 있어요.':'함께 재생한 뒤, 구도와 느낌이 어떻게 다른지 이야기해 보세요.';
+    }
+    compareSides.forEach((side,index)=>{side.select.innerHTML=lessons.map(item=>`<option value="${item.id}">${item.id}. ${item.name}</option>`).join('');side.select.value=index===0?'02':'03';side.select.addEventListener('change',loadComparison);side.video.addEventListener('error',()=>{if(side.video.hasAttribute('src')){pauseComparison();compareStatus.textContent='영상을 불러오지 못했어요. 새로고침 후 다시 시도해 주세요.';}});});
+    async function playComparison(restart=false){
+      pauseComparison();const operation=comparisonOperation;
+      try{const time=restart?0:Math.min(...compareSides.map(side=>side.video.currentTime||0));compareSides.forEach(side=>{side.video.currentTime=time;});await Promise.all(compareSides.map(side=>side.video.play()));if(operation!==comparisonOperation)return;compareStatus.textContent='두 영상을 함께 재생 중입니다. 각 영상은 반복됩니다.';}catch{if(operation===comparisonOperation){pauseComparison();compareStatus.textContent='영상의 재생 버튼을 눌러 주세요. 파일을 불러오지 못하면 새로고침 후 다시 시도해 주세요.';}}
+    }
+    compareOpen.addEventListener('click',()=>{comparePanel.hidden=false;compareOpen.setAttribute('aria-expanded','true');if(!comparisonLoaded)loadComparison();comparePanel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});compareSides[0].select.focus({preventScroll:true});});
+    document.querySelector('#compare-close').addEventListener('click',async()=>{pauseComparison();if(document.fullscreenElement===comparePanel)try{await document.exitFullscreen();}catch{}comparePanel.hidden=true;compareOpen.setAttribute('aria-expanded','false');compareOpen.focus();});
+    document.querySelectorAll('[data-pair]').forEach(button=>button.addEventListener('click',()=>{button.dataset.pair.split(',').forEach((id,index)=>compareSides[index].select.value=id);loadComparison();}));
+    document.querySelector('#compare-play').addEventListener('click',()=>playComparison());
+    document.querySelector('#compare-pause').addEventListener('click',()=>{pauseComparison();compareStatus.textContent='두 영상을 멈췄어요. 화면에 담긴 범위와 모찌의 느낌을 살펴보세요.';});
+    document.querySelector('#compare-restart').addEventListener('click',()=>playComparison(true));
+    document.querySelector('#compare-fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement===comparePanel)await document.exitFullscreen();else await comparePanel.requestFullscreen();}catch{compareStatus.textContent='브라우저의 전체 화면 기능을 사용해 주세요.';}});
+    const filtered=()=>lessons.filter(item=>activeFilter==='all'||item.type===activeFilter);
+    function render(){
+      grid.innerHTML=filtered().map(item=>`<article class="card"><button class="preview" data-id="${item.id}" aria-label="${item.name} 영상 크게 보기"><img src="posters/${encodeURIComponent(item.file)}.jpg" width="640" height="360" alt="모찌로 살펴보는 ${item.name}" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><div class="card-body"><div class="card-top"><div class="card-title"><span class="number">${item.id}</span><h2>${item.name}</h2></div><span class="category ${item.type==='shot'?'shot':''}">${item.type==='angle'?'앵글':'샷 크기'}</span></div><p class="english">${item.en}</p><p class="card-description">${item.description}</p><p class="question"><span>생각해 보기</span>${item.question}</p></div></article>`).join('');
+      document.querySelector('#result-count').textContent=`${activeFilter==='all'?'전체':activeFilter==='angle'?'카메라 앵글':'샷 크기'} ${filtered().length}개 영상`;
+    }
+    function showLesson(index){
+      const list=filtered(), item=list[index];
+      if(!item)return;
+      currentIndex=index;
+      document.querySelector('#viewer-kicker').textContent=`${item.type==='angle'?'CAMERA ANGLE':'SHOT SIZE'} / ${item.en}`;
+      document.querySelector('#viewer-title').textContent=`${item.id}. ${item.name}`;
+      document.querySelector('#viewer-description').textContent=item.description;
+      document.querySelector('#viewer-question').textContent=`함께 생각해 보기 · ${item.question}`;
+      document.querySelector('#viewer-count').textContent=`${index+1} / ${list.length} · ${activeFilter==='all'?'전체 영상':activeFilter==='angle'?'카메라 앵글':'샷 크기'}`;
+      document.querySelector('#previous').disabled=index===0;
+      document.querySelector('#next').disabled=index===list.length-1;
+      document.querySelector('#video-error').hidden=true;
+      player.poster=`posters/${encodeURIComponent(item.file)}.jpg`;
+      player.src=`${encodeURIComponent(item.file)}.mp4`;
+      player.setAttribute('aria-label',`${item.name} 예시 영상`);
+      player.load();
+      player.play().catch(()=>{});
+    }
+    function openLesson(index){
+      pauseComparison();
+      returnFocus=document.activeElement;
+      viewer.showModal();
+      document.body.style.overflow='hidden';
+      showLesson(index);
+    }
+    grid.addEventListener('click',event=>{const button=event.target.closest('[data-id]');if(button)openLesson(filtered().findIndex(item=>item.id===button.dataset.id));});
+    document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{activeFilter=button.dataset.filter;document.querySelectorAll('.filter').forEach(tab=>tab.setAttribute('aria-pressed',String(tab===button)));render();}));
+    document.querySelector('#start').addEventListener('click',()=>openLesson(0));
+    document.querySelector('#close').addEventListener('click',()=>viewer.close());
+    document.querySelector('#previous').addEventListener('click',()=>showLesson(currentIndex-1));
+    document.querySelector('#next').addEventListener('click',()=>showLesson(currentIndex+1));
+    document.querySelector('#fullscreen').addEventListener('click',async()=>{try{if(player.requestFullscreen)await player.requestFullscreen();else if(player.webkitEnterFullscreen)player.webkitEnterFullscreen();}catch{document.querySelector('#fullscreen').textContent='영상에서 전체 화면 선택';}});
+    viewer.addEventListener('close',()=>{player.pause();player.removeAttribute('src');player.load();document.body.style.overflow='';if(returnFocus&&returnFocus.isConnected)returnFocus.focus();});
+    viewer.addEventListener('click',event=>{if(event.target===viewer){const rect=viewer.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)viewer.close();}});
+    viewer.addEventListener('keydown',event=>{if(event.target===player||document.fullscreenElement)return;if(event.key==='ArrowLeft'){event.preventDefault();showLesson(currentIndex-1);}if(event.key==='ArrowRight'){event.preventDefault();showLesson(currentIndex+1);}});
+    player.addEventListener('error',()=>{if(player.hasAttribute('src'))document.querySelector('#video-error').hidden=false;});
+    render();
+  </script>
+</body>
+</html>
